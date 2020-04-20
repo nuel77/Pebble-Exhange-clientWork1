@@ -49,7 +49,7 @@ let dataForTable5 = [
         "price":"3223l",
         "amount":"643",
         "filled":"4645",
-        "notional":"6275"
+        "notional":"625"
     },
     {
         "txHash":"val",
@@ -59,7 +59,17 @@ let dataForTable5 = [
         "price":"3223l",
         "amount":"643",
         "filled":"4645",
-        "notional":"6275"
+        "notional":"6235"
+    },
+    {
+        "txHash":"smallest",
+        "date":"23/2/14",
+        "pair":"6,2",
+        "side":"213",
+        "price":"3223l",
+        "amount":"643",
+        "filled":"4645",
+        "notional":"568"
     },
     {
         "txHash":"val",
@@ -69,7 +79,7 @@ let dataForTable5 = [
         "price":"3223l",
         "amount":"643",
         "filled":"4645",
-        "notional":"6275"
+        "notional":"3242"
     },
     {
         "txHash":"val",
@@ -79,7 +89,7 @@ let dataForTable5 = [
         "price":"3223l",
         "amount":"643",
         "filled":"4645",
-        "notional":"6275"
+        "notional":"3232"
     },
     {
         "txHash":"val",
@@ -89,17 +99,7 @@ let dataForTable5 = [
         "price":"3223l",
         "amount":"643",
         "filled":"4645",
-        "notional":"6275"
-    },
-    {
-        "txHash":"val",
-        "date":"23/2/14",
-        "pair":"6,2",
-        "side":"213",
-        "price":"3223l",
-        "amount":"643",
-        "filled":"4645",
-        "notional":"6275"
+        "notional":"4332"
     },
     {
         "txHash":"val",
@@ -330,9 +330,20 @@ $(function () {
     });
 
     //all other tables
-    $('#table-5').bootstrapTable({
-        data: dataForTable5
-    });
+    $('#table-5').DataTable( {
+        data: dataForTable5,
+        scrollX:false,
+        columns: [
+            { data: 'txHash' },
+            { data: 'date' },
+            { data: 'pair' },
+            { data: 'side' },
+            { data: 'price' },
+            { data: 'amount' },
+            {data:'filled'},
+            { data: 'notional' }
+        ]
+    } );
     $('#table-4').bootstrapTable({
         data: dataForTable4
     });

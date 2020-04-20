@@ -149,13 +149,7 @@ thead {
     padding: 0 16px;
    border-radius: 5px;
 }
-.card-5 {
-    height: 220px;
-    overflow-y:scroll;
-}
-.card-1 ::-webkit-scrollbar {
-    display: none;
-}
+
 .card-5 .nav{
     background-color: #12161C;
 }
@@ -165,6 +159,50 @@ thead {
     border-color: transparent;
 }
 .fixed-table-loading{
+    display: none;
+}
+.dataTables_wrapper {
+   overflow-x: hidden;
+    height: 210px;
+    overflow-y: scroll;
+}
+.dataTables_wrapper::-webkit-scrollbar{
+    display: none;
+}
+
+.dataTables_wrapper .row{
+    background-color: #12161C;
+    color: grey;
+    font-size: smaller;
+}
+.dataTables_length{
+    display: none;
+}
+.dataTables_filter{
+    padding: 0 10px;
+}
+.dataTables_filter input{
+    height: 25px;
+    width: 100px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    background-color: black;
+    border-color: transparent;
+    color: white;
+}
+.dataTables_filter input:hover{
+    height: 25px;
+    width: 100px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    background-color: black;
+    border-color: transparent;
+    color: white;
+}
+.dataTables_info{
+    display: none;
+}
+.dataTables_paginate{
     display: none;
 }
 /*    background: rgb(84,158,138);*/

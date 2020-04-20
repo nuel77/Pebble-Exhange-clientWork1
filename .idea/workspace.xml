@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bf87a78-2ace-4066-9365-867cb8206279" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Public/bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Public/js/bip39WordList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Public/main.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/bip39WordList.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/Public/signin.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/wordlist.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/binanceWordList.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/Public/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/js/myScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/js/myScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/signin.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +40,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RecentsManager">
@@ -73,6 +72,7 @@
       <workItem from="1587190878629" duration="25710000" />
       <workItem from="1587275085212" duration="18882000" />
       <workItem from="1587364588419" duration="13974000" />
+      <workItem from="1587385406663" duration="3143000" />
     </task>
     <servers />
   </component>
