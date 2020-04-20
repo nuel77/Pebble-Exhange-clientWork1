@@ -218,37 +218,37 @@ let dataForTable3 = [
 ];
 let dataForTable1 = [
     {
-        "price": 0,
+        "price": "0",
         "pair": "test0",
         "volume": "$0",
         "change": "932"
     },
     {
-        "price": 1,
+        "price": "1",
         "pair": "test1",
         "volume": "$1",
         "change": "932"
     },
     {
-        "price": 2,
+        "price": "2",
         "pair": "test2",
         "volume": "$2",
         "change": "932"
     },
     {
-        "price": 3,
+        "price": "3",
         "pair": "test3",
         "volume": "$3",
         "change": "932"
     },
     {
-        "price": 4,
+        "price": "4",
         "pair": "test4",
         "volume": "$4",
         "change": "932"
     },
     {
-        "price": 5,
+        "price": "5",
         "pair": "test5",
         "volume": "$5",
         "change": "932"
@@ -292,7 +292,7 @@ let dataForTable2 = [
 function precise(elem) {
     elem.value = Number(elem.value).toFixed(8);
 }
-
+//form events for calculation total etc
 $('#buyAmount').change(() => {
     let val = $('#buyAmount').val() * $('#buyPrice').val();
     $('#buyTotal').val(val.toFixed(8));
@@ -301,37 +301,30 @@ $('#sellAmount').change(() => {
     let val = $('#sellAmount').val() * $('#sellPrice').val();
     $('#sellTotal').val(val.toFixed(8));
 });
+//table event for search --table1
+$('#table1Search').on('keyup change paste', function(e){
+    let table = $('#table-1').DataTable();
+    table.search( this.value ).draw();
+
+});
+//table event for search --table4
+$('#table5Search').on('keyup change paste', function(e){
+    let table = $('#table-5').DataTable();
+    table.search( this.value ).draw();
+
+});
+
 
 
 //when document is ready this function is called
 $(function () {
 
-    //toggleable table for the first table
-    $('#changeToVolume').click(() => {
-        let table = $('#table-1')
-        table.bootstrapTable('destroy');
-        let t = $('#table-1-toggle');
-        t.attr('data-field', 'volume');
-        t.text('Volume');
-
-        table.bootstrapTable({
-            data: dataForTable1
-        });
-    });
-    $('#changeToChange').click(() => {
-        let table = $('#table-1')
-        table.bootstrapTable('destroy');
-        let t = $('#table-1-toggle');
-        t.attr('data-field', 'change');
-        t.text('Change');
-        table.bootstrapTable({
-            data: dataForTable1
-        });
-    });
-
-    //all other tables
+    //initialize tables
     $('#table-5').DataTable( {
         data: dataForTable5,
+        info:false,
+        fixedHeader: true,
+        paging:false,
         scrollX:false,
         columns: [
             { data: 'txHash' },
@@ -344,18 +337,99 @@ $(function () {
             { data: 'notional' }
         ]
     } );
-    $('#table-4').bootstrapTable({
-        data: dataForTable4
+    $('#table-4').DataTable({
+        data: dataForTable4,
+        info:false,
+        fixedHeader: true,
+        bFilter:false,
+        paging:false,
+        scrollX:false,
+        columns: [
+            { data: 'price' },
+            { data: 'amount' },
+            { data: 'total' }
+
+        ]
     });
-    $('#table-3').bootstrapTable({
-        data: dataForTable3
+    $('#table-3').DataTable({
+        data: dataForTable3,
+        fixedHeader: true,
+        info:false,
+        bFilter:false,
+        paging:false,
+        scrollX:false,
+        columns: [
+            { data: 'price' },
+            { data: 'amount' },
+            { data: 'total' }
+
+        ]
     });
-    $('#table-2').bootstrapTable({
-        data: dataForTable2
+    $('#table-2').DataTable({
+        data: dataForTable2,
+        info:false,
+        bFilter:false,
+        paging:false,
+        scrollX:false,
+        columns: [
+            { data: 'price' },
+            { data: 'amount' },
+            { data: 'time' },
+        ]
     });
-    $('#table-1').bootstrapTable({
-        data: dataForTable1
+    $('#table-1').DataTable({
+        data: dataForTable1,
+        paging:false,
+        info:false,
+        select:'single',
+        scrollX:false,
+        columns: [
+            { data: 'price' },
+            { data: 'pair' },
+            { data: 'change' },
+        ]
     });
+
+
+    //first table features
+    $('#changeToVolume').click(() => {
+        $("#table-1").dataTable().fnDestroy();
+        $('#table-1-toggle').text("Volume");
+        $('#table-1').DataTable({
+            data: dataForTable1,
+            select:'single',
+            paging:false,
+            scrollX:false,
+            columns: [
+                { data: 'price' },
+                { data: 'pair' },
+                { data: 'volume' },
+            ]
+        });
+    });
+    $('#changeToChange').click(() => {
+        $("#table-1").dataTable().fnDestroy();
+        $('#table-1-toggle').text("Change");
+        $('#table-1').DataTable({
+            data: dataForTable1,
+            select:'single',
+            paging:false,
+            scrollX:false,
+            columns: [
+                { data: 'price' },
+                { data: 'pair' },
+                { data: 'change' },
+            ]
+        });
+    });
+    //click event of first table
+    $('#table-1').DataTable()
+        .on( 'select', function ( e, dt, type, indexes ) {
+            if ( type === 'row' ) {
+                var data = $('#table-1').DataTable().rows( indexes ).data()[0];
+            }
+            console.log(data);
+        } );
 
 
     //Sending form data

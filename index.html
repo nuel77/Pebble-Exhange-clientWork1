@@ -13,8 +13,10 @@
 <!--    bootstrap-table-->
     <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
 <!--    dataTable -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/r-2.2.3/sc-2.0.1/sp-1.0.1/datatables.min.css"/>
-    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/r-2.2.3/sc-2.0.1/sp-1.0.1/datatables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/fc-3.3.0/fh-3.1.6/r-2.2.3/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/b-1.6.1/b-colvis-1.6.1/b-html5-1.6.1/fc-3.3.0/fh-3.1.6/r-2.2.3/sc-2.0.1/sp-1.0.1/sl-1.3.1/datatables.min.js"></script>
 <!--    custom stylesheet-->
     <link rel="stylesheet" href="css/styles.css">
     <title>Pebble-Demo</title>
@@ -72,9 +74,9 @@
                         </ul>
                         <ul class="nav mt-3" role="tablist" id="subNav-2">
                             <li class="nav-item">
-                                <form>
-                                    <input type="search" placeholder="Search">
-                                </form>
+
+                                    <input type="search" placeholder="Search" id="table1Search" autocomplete="off">
+
 
                             </li>
                             <li>
@@ -86,7 +88,7 @@
                         </ul>
                     </div>
                     <div class="card-body text-white mt-2 ">
-                        <table class="table table-hover table-dark table-sm" id="table-1">
+                        <table class="table display table-dark table-sm" id="table-1">
                             <thead>
                             <tr>
                                 <th data-field="pair">Pair</th>
@@ -565,7 +567,7 @@
         <div class="row">
             <div class="col-8 pl-0 pr-2">
                 <!-- Card-5-->
-                <div class="card-5 card-1">
+                <div class="card-5 ">
                     <ul class="nav" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link btn btn-outline-warning btn-sm " href="#description"
@@ -581,6 +583,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-outline-warning btn-sm" href="#deals" role="tab">Balances</a>
+                        </li>
+                        <li class="nav-item ml-auto">
+                            <input type="search" placeholder="Search" class="card-nav-search" id="table5Search" autocomplete="off">
                         </li>
                     </ul>
                     <div>
