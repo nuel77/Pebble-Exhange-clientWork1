@@ -191,10 +191,12 @@ thead {
     color: white;
 }
 .dataTables_filter input:hover{
-    height: 25px;
-    width: 100px;
-    border-radius: 5px;
-    padding: 5px 5px;
+    background-color: black;
+    border-color: transparent;
+    color: white;
+}
+.dataTables_filter input:focus{
+    outline:none;
     background-color: black;
     border-color: transparent;
     color: white;
