@@ -1,0 +1,173 @@
+
+body{
+    background-color: black;
+    overflow-x: hidden;
+    padding: 0;
+    margin: 0;
+}
+nav{
+    background-color: #12161C;
+}
+nav .btn{
+    border-radius:0px ;
+    background-color: transparent;
+    border-color: transparent;
+}
+nav ul{
+    padding: 0 2em;
+}
+section .card{
+     padding: 0;
+     margin: 0;
+     width: 100%;
+ }
+section .card-header{
+    padding:0;
+    color: gray;
+    font-size: smaller;
+}
+section .card-body{
+    padding: 0;
+}
+section .card-columns{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+section .nav input{
+    height: 25px;
+    width: 100px;
+    border-radius: 5px;
+    padding: 5px 5px;
+    background-color: black;
+    border-color: transparent;
+    color: white;
+
+}
+thead {
+    color: gray;
+    font-size: smaller;
+    text-decoration: none;
+}
+.navbar{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+.card{
+    background-color:#12161C;
+    border-radius: 0;
+}
+
+.card-table{
+    height: 100%;
+}
+.card .btn{
+    border-radius: 2px;
+    border-color: transparent;
+    font-size: small;
+}
+.card .nav-item{
+    padding: 0 5px ;
+
+}
+.card-body{
+    font-size: small;
+    max-height: 150px;
+    overflow: hidden scroll ;
+}
+.card-body::-webkit-scrollbar {
+    display: none;
+}
+.card-1 .nav-link{
+    padding: 0 5px;
+}
+.card-1 #subNav-2 a{
+    font-size: smaller;
+}
+
+.card-1 #subNav-2 .btn{
+    border-radius: 2px;
+    width: 55px;
+    margin: 0 3px;
+    height: 24px;
+    padding:2px 0;
+}
+.card-3 .card-body{
+    max-height: 175px;
+}
+.card-3 .card-header i{
+    padding:  5px 2px;
+    color: grey;
+}
+.card-3 i{
+    background-color: transparent;
+    margin: 0;
+}
+.card-4 .card-body{
+    max-height: 183px;
+}
+.card-4 a{
+    font-size: large;
+    font-weight: bold;
+    margin:0 10px;
+}
+.card-6{
+    background-color: #12161C;
+    padding: 2px 16px;
+}
+#secondSection form{
+     color: grey;
+     font-size: smaller;
+ }
+#secondSection label{
+   margin: 0;
+}
+#secondSection form input{
+    background-color: black;
+    border-color: transparent;
+    color: white;
+    font-weight: bold;
+ }
+#secondSection .sell-form .btn{
+    color: white;
+    font-size: medium;
+    background-color: red;
+}
+#secondSection .buy-form .btn{
+    color: white;
+    font-size: medium;
+    background-color: red;
+}
+.input-group-text{
+    color: grey;
+    background-color: black;
+    border-color: black;
+    font-size: small;
+    border-width: 0;
+    padding: 0 16px;
+   border-radius: 5px;
+}
+.card-5 {
+    height: 220px;
+    overflow-y:scroll;
+}
+.card-1 ::-webkit-scrollbar {
+    display: none;
+}
+.card-5 .nav{
+    background-color: #12161C;
+}
+.card-5 .btn{
+    margin: 5px 5px;
+    padding-right: 20px;
+    border-color: transparent;
+}
+.fixed-table-loading{
+    display: none;
+}
+/*    background: rgb(84,158,138);*/
+/*    background: linear-gradient(90deg, rgba(84,158,138,1) 0%, rgba(15,159,53,1) 35%, rgba(0,255,110,1) 100%);*/
+/*}*/
+

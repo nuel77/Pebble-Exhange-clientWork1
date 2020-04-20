@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/0b536b009a.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Pebble-Demo</title>
+
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <a class="navbar-brand" href="#">pebble</a>
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <button type="button" class="btn btn-dark"><a class="nav-link" href="#">Exchange</a></button>
+            </li>
+            <li class="nav-item active">
+                <button type="button" class="btn btn-dark"><a class="nav-link" href="#">Explorer </a></button>
+            </li>
+            <li class="nav-item active">
+                <button type="button" class="btn btn-dark"><a class="nav-link" href="signin.html">Wallet </a></button>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container-fluid">
+
+    <section id="firstSection" class="mt-2">
+        <div class="row">
+            <!--Card-1-->
+            <div class="col-2 pr-0 pl-0">
+                <div class="card card-1">
+                    <div class="card-header mt-2">
+                        <ul class="nav" role="tablist">
+                            <li class="nav-item">
+                                <i class="fas fa-stream "></i>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-outline-warning btn-sm " href="#description"
+                                   role="tab">BNB</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-outline-warning btn-sm" href="#description"
+                                   role="tab">BTC</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-outline-warning btn-sm" href="#deals" role="tab">ALTS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-outline-warning btn-sm" href="#deals" role="tab">FIAT$</a>
+                            </li>
+                        </ul>
+                        <ul class="nav mt-3" role="tablist" id="subNav-2">
+                            <li class="nav-item">
+                                <form>
+                                    <input type="search" placeholder="Search">
+                                </form>
+
+                            </li>
+                            <li>
+                                <a class="nav-link btn btn-outline-secondary " id="changeToChange" role="tab">Change</a>
+                            </li>
+                            <li>
+                                <a class="nav-link btn btn-outline-secondary " id="changeToVolume" role="tab">Volume</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body text-white mt-2 ">
+                        <table class="table table-hover table-dark table-sm" id="table-1">
+                            <thead>
+                            <tr>
+                                <th data-field="pair">Pair</th>
+                                <th data-field="price">Price</th>
+                                <th data-field="change" id="table-1-toggle">Change</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+                <!--Card-2-->
+                <div class="card card-2 text-white mt-2 pl-1">
+                    <div class="card-header pt-2">
+                        <p class="card-title text-warning">Trading History</p>
+                    </div>
+                    <div class="card-body ">
+                        <table class="table table-hover table-dark table-sm" id="table-2">
+                            <thead>
+                            <tr>
+                                <th data-field="price">Price</th>
+                                <th data-field="amount">Amount</th>
+                                <th data-field="time">Time</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+
+                            <tr>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Graph-card-->
+            <div class="col-8 pr-2 pl-2">
+                <div class="card graph-card " style=" height: 100%">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div id="tradingview_e8e00"></div>
+                        <div class="tradingview-widget-copyright"><a
+                                href="https://in.tradingview.com/symbols/NASDAQ-AAPL/" rel="noopener"
+                                target="_blank"><span class="blue-text">AAPL Chart</span></a> by TradingView
+                        </div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                        <script type="text/javascript">
+                            new TradingView.widget(
+                                {
+                                    "width": 1000,
+                                    "height": 400,
+                                    "symbol": "NASDAQ:AAPL",
+                                    "interval": "W",
+                                    "timezone": "Etc/UTC",
+                                    "theme": "dark",
+                                    "style": "1",
+                                    "locale": "in",
+                                    "toolbar_bg": "#f1f3f6",
+                                    "enable_publishing": false,
+                                    "allow_symbol_change": true,
+                                    "container_id": "tradingview_e8e00"
+                                }
+                            );
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+                </div>
+            </div>
+
+            <!-- Card-3-->
+            <div class="col-2 pr-0 pl-0">
+                <div class="card card-3">
+                    <div class="card-header">
+                        <i class="fas fa-stream btn btn-dark"></i>
+                    </div>
+                    <div class="card-body ">
+                        <table class="table table-hover table-dark table-sm" id="table-3">
+                            <thead>
+                            <tr>
+                                <th data-field="price">Price</th>
+                                <th data-field="amount">Amount</th>
+                                <th data-field="total">Total</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+
+                            <tr>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Card-4-->
+                <div class="card card-4 text-white mt-2 pl-1">
+                    <div class="card-header pt-2">
+                        <a class="card-title text-danger">0.00709413</a> <a
+                            class="card-title text-warning">0.00709413</a>
+                    </div>
+                    <div class="card-body ">
+                        <table class="table table-hover table-dark table-sm mt-2" id="table-4">
+                            <thead>
+                            <tr>
+                                <th data-field="price">Price</th>
+                                <th data-field="amount">Amount</th>
+                                <th data-field="total">Total</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+                            <tr>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                            </tr>
+
+                            <tr>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            <tr>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!--  new row-section 2-->
+
+    <section class="mt-2" id="secondSection">
+        <div class="row">
+            <div class="col-8 pl-0 pr-2">
+                <!-- Card-5-->
+                <div class="card-5 card-1">
+                    <ul class="nav" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-warning btn-sm " href="#description"
+                               role="tab">Open Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-warning btn-sm" href="#description"
+                               role="tab">Open History</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-warning btn-sm" href="#deals" role="tab">Trade
+                                History</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-warning btn-sm" href="#deals" role="tab">Balances</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <table class="table table-hover table-dark table-sm" id="table-5">
+                            <thead>
+                            <tr>
+                                <th data-field="txHash">TxHash</th>
+                                <th data-field="date">Date</th>
+                                <th data-field="pair">Pair</th>
+                                <th data-field="side">Side</th>
+                                <th data-field="price">Price</th>
+                                <th data-field="amount">Amount</th>
+                                <th data-field="filled">Filled</th>
+                                <th data-field="notional"> Notional</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--  Card-6 payments-->
+            <div class="col-4 card-6">
+                <div style="background-color: #12161C; font-size: smaller">
+                    <i class="fa fa-stream" style="margin-right: 15px;padding: 0"></i><a class="text-warning">Limit
+                    Order</a>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <!--  buy Form-->
+                        <form id="buyForm">
+                            <div class="form-group buy-form ">
+                                <label for="buyPrice">Price</label>
+                                <div class="input-group ">
+                                    <input class="form-control form-control-sm" id="buyPrice" name="buyPrice"
+                                           type="number" onclick="precise(this)"
+                                           value="0.00002278" step="0.00000001" min="0">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">BNB</span>
+                                    </div>
+                                </div>
+                                <label for="buyAmount">Amount</label>
+                                <div class="input-group ">
+                                    <input class="form-control form-control-sm" id="buyAmount" name="amount"
+                                           value="0" step="100" min="0" type="number" placeholder="">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">RUNE</span>
+                                    </div>
+                                </div>
+                                <label for="buyTotal">Total</label>
+                                <div class="input-group ">
+                                    <input class="form-control form-control-sm" id="buyTotal" name="total" type="text"
+                                           placeholder="">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">BNB</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-sm btn-block" type="submit">Buy Rune</button>
+                        </form>
+                        <!--end of buy Form-->
+                    </div>
+                    <div class="col">
+                        <!--  sell Form-->
+                        <form class="sell-form" id="sellForm">
+                            <div class="form-group  ">
+                                <label for="sellPrice">Price</label>
+                                <div class="input-group ">
+                                    <input class="form-control form-control-sm" id="sellPrice" type="number"
+                                           onclick="precise(this)"
+                                           value="0.00002278" step="0.00000001" min="0">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">BNB</span>
+                                    </div>
+                                </div>
+                                <label for="sellAmount">Amount</label>
+                                <div class="input-group ">
+                                    <input class="form-control form-control-sm" id="sellAmount" type="number"
+                                           value="0" step="100" min="0">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">RUNE</span>
+                                    </div>
+                                </div>
+                                <label for="sellTotal">Total</label>
+                                <div class="input-group ">
+                                    <input class="form-control form-control-sm" id="sellTotal" type="text" min="0">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text">BNB</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="btn btn-sm btn-block " type="submit">Sell Rune</button>
+                        </form>
+                        <!--end of sell Form-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+</div>
+<!--axios cdn-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js" crossorigin="anonymous"></script>
+<!--font awesome cdn-->
+<script src="https://kit.fontawesome.com/0b536b009a.js" crossorigin="anonymous"></script>
+<!--jquery-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<!--bootstrap-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+<!--bootstrap table cdn-->
+<script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
+<!--main script file for the project-->
+<script src="js/myScript.js"></script>
+</body>
+</html>
