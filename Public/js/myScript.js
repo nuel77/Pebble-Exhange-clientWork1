@@ -2,7 +2,7 @@
 //must be a array of jsons and properties must match data-field attribute inside <thead> of every table element
 let dataForTable5 = [
     {
-        "txHash":"val",
+        "txHash":"1",
         "date":"23/2/14",
         "pair":"6,2",
         "side":"213",
@@ -12,7 +12,7 @@ let dataForTable5 = [
         "notional":"6275"
     },
     {
-        "txHash":"val",
+        "txHash":"2",
         "date":"23/2/14",
         "pair":"6,2",
         "side":"213",
@@ -22,7 +22,7 @@ let dataForTable5 = [
         "notional":"6275"
     },
     {
-        "txHash":"val",
+        "txHash":"3",
         "date":"23/2/14",
         "pair":"6,2",
         "side":"213",
@@ -32,7 +32,7 @@ let dataForTable5 = [
         "notional":"6275"
     },
     {
-        "txHash":"val",
+        "txHash":"4",
         "date":"23/2/14",
         "pair":"6,2",
         "side":"213",
@@ -42,7 +42,7 @@ let dataForTable5 = [
         "notional":"6275"
     },
     {
-        "txHash":"val",
+        "txHash":"5",
         "date":"23/2/14",
         "pair":"6,2",
         "side":"213",
@@ -52,7 +52,7 @@ let dataForTable5 = [
         "notional":"625"
     },
     {
-        "txHash":"val",
+        "txHash":"6",
         "date":"23/2/14",
         "pair":"6,2",
         "side":"213",
@@ -62,7 +62,7 @@ let dataForTable5 = [
         "notional":"6235"
     },
     {
-        "txHash":"smallest",
+        "txHash":"7",
         "date":"23/2/14",
         "pair":"6,2",
         "side":"213",
@@ -72,7 +72,7 @@ let dataForTable5 = [
         "notional":"568"
     },
     {
-        "txHash":"val",
+        "txHash":"8",
         "date":"23/2/14",
         "pair":"6,2",
         "side":"213",
@@ -82,7 +82,7 @@ let dataForTable5 = [
         "notional":"3242"
     },
     {
-        "txHash":"val",
+        "txHash":"9",
         "date":"23/2/14",
         "pair":"6,2",
         "side":"213",
@@ -90,26 +90,6 @@ let dataForTable5 = [
         "amount":"643",
         "filled":"4645",
         "notional":"3232"
-    },
-    {
-        "txHash":"val",
-        "date":"23/2/14",
-        "pair":"6,2",
-        "side":"213",
-        "price":"3223l",
-        "amount":"643",
-        "filled":"4645",
-        "notional":"4332"
-    },
-    {
-        "txHash":"val",
-        "date":"23/2/14",
-        "pair":"6,2",
-        "side":"213",
-        "price":"3223l",
-        "amount":"643",
-        "filled":"4645",
-        "notional":"6275"
     }
 ];
 let dataForTable4 = [
@@ -313,15 +293,9 @@ $('#table5Search').on('keyup change paste', function(e){
     table.search( this.value ).draw();
 
 });
-
-
-
-//when document is ready this function is called
-$(function () {
-
-    //initialize tables
+function createTable5(data){
     $('#table-5').DataTable( {
-        data: dataForTable5,
+        data: data,
         info:false,
         fixedHeader: true,
         paging:false,
@@ -337,10 +311,18 @@ $(function () {
             { data: 'notional' }
         ]
     } );
+}
+
+
+//when document is ready this function is called
+$(function () {
+
+    //initialize tables
+    createTable5(dataForTable5);
+
     $('#table-4').DataTable({
         data: dataForTable4,
         info:false,
-        fixedHeader: true,
         bFilter:false,
         paging:false,
         scrollX:false,
@@ -353,7 +335,6 @@ $(function () {
     });
     $('#table-3').DataTable({
         data: dataForTable3,
-        fixedHeader: true,
         info:false,
         bFilter:false,
         paging:false,

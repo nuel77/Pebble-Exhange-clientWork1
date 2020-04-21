@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8bf87a78-2ace-4066-9365-867cb8206279" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Public/js/socket-scripts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Public/js/socket.io.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Public/signin.html" beforeDir="false" afterPath="$PROJECT_DIR$/Public/signin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/js/myScript.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/js/myScript.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Public/js/socket-scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/Public/js/socket-scripts.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +73,8 @@
       <workItem from="1587364588419" duration="13974000" />
       <workItem from="1587385406663" duration="14346000" />
       <workItem from="1587407927046" duration="2099000" />
-      <workItem from="1587456880814" duration="716000" />
+      <workItem from="1587456880814" duration="4448000" />
+      <workItem from="1587463746414" duration="2094000" />
     </task>
     <servers />
   </component>
@@ -100,5 +97,17 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1587392336322" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/Public/js/myScript.js</url>
+          <line>146</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
