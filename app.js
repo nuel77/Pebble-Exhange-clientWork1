@@ -1,13 +1,19 @@
-const express = require('express');
+const express=require('express');
+const app =express();
+const server = require('http').Server(app);
+const io = require('socket.io')(server);
 const bodyParser = require('body-parser');
 
-const app = express();
+
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get('/',(req,res)=>{
     res.sendFile(__dirname+"/index.html");
+});
+io.on('connection', (socket) => {
+    console.log('a user connected');
 });
 
 app.post('/sellPost',(req,res)=>{
@@ -19,6 +25,6 @@ app.post('/buyPost',(req,res)=>{
     console.log(req.body);
     res.send("got it");
 });
-const server = app.listen(3000,function () {
-    console.log(" listening on port %d", server.address().port);
-});
+server.listen(3300);
+
+
