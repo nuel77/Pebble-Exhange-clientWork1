@@ -281,13 +281,7 @@ $('#sellAmount').change(() => {
     let val = $('#sellAmount').val() * $('#sellPrice').val();
     $('#sellTotal').val(val.toFixed(8));
 });
-//table event for search --table1
-$('#table1Search').on('keyup change paste', function(e){
-    let table = $('#table-1').DataTable();
-    table.search( this.value ).draw();
-
-});
-//table event for search --table4
+//table event for search --table-5
 $('#table5Search').on('keyup change paste', function(e){
     let table = $('#table-5').DataTable();
     table.search( this.value ).draw();
@@ -300,6 +294,7 @@ function createTable5(data){
         fixedHeader: true,
         paging:false,
         scrollX:false,
+        select:'single',
         columns: [
             { data: 'txHash' },
             { data: 'date' },
@@ -323,6 +318,7 @@ $(function () {
     $('#table-4').DataTable({
         data: dataForTable4,
         info:false,
+        fixedHeader: true,
         bFilter:false,
         paging:false,
         scrollX:false,
@@ -335,6 +331,7 @@ $(function () {
     });
     $('#table-3').DataTable({
         data: dataForTable3,
+        fixedHeader: true,
         info:false,
         bFilter:false,
         paging:false,
@@ -371,43 +368,12 @@ $(function () {
         ]
     });
 
+    //click event of 5th table
 
-    //first table features
-    $('#changeToVolume').click(() => {
-        $("#table-1").dataTable().fnDestroy();
-        $('#table-1-toggle').text("Volume");
-        $('#table-1').DataTable({
-            data: dataForTable1,
-            select:'single',
-            paging:false,
-            scrollX:false,
-            columns: [
-                { data: 'price' },
-                { data: 'pair' },
-                { data: 'volume' },
-            ]
-        });
-    });
-    $('#changeToChange').click(() => {
-        $("#table-1").dataTable().fnDestroy();
-        $('#table-1-toggle').text("Change");
-        $('#table-1').DataTable({
-            data: dataForTable1,
-            select:'single',
-            paging:false,
-            scrollX:false,
-            columns: [
-                { data: 'price' },
-                { data: 'pair' },
-                { data: 'change' },
-            ]
-        });
-    });
-    //click event of first table
-    $('#table-1').DataTable()
+    $('#table-5').DataTable()
         .on( 'select', function ( e, dt, type, indexes ) {
             if ( type === 'row' ) {
-                var data = $('#table-1').DataTable().rows( indexes ).data()[0];
+                var data = $('#table-5').DataTable().rows( indexes ).data()[0];
             }
             console.log(data);
         } );

@@ -31,7 +31,7 @@ io.on('connection', (socket) => {
             "notional": "6275" + counter
         });
         counter++;
-        if(counter === 100) {
+        if(counter === 10) {
             clearInterval(i);
         }
     }, 3000);

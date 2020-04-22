@@ -51,8 +51,42 @@
 
     <section id="firstSection" class="mt-2">
         <div class="row">
+            <!-- Graph-card-->
+            <div class="col-8 pr-2 pl-2">
+                <div class="card graph-card " style=" height: 100%">
+                    <!-- TradingView Widget BEGIN -->
+                    <div class="tradingview-widget-container">
+                        <div id="tradingview_7566f"></div>
+                        <div class="tradingview-widget-copyright"><a href="https://in.tradingview.com/symbols/POLONIEX-ETHBTC/" rel="noopener" target="_blank"><span class="blue-text">ETHBTC Chart</span></a> by TradingView</div>
+                        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+                        <script type="text/javascript">
+                            new TradingView.widget(
+                                {
+                                    "width": 980,
+                                    "height": 420,
+                                    "symbol": "POLONIEX:ETHBTC",
+                                    "interval": "30",
+                                    "timezone": "Etc/UTC",
+                                    "theme": "dark",
+                                    "style": "1",
+                                    "locale": "in",
+                                    "toolbar_bg": "#f1f3f6",
+                                    "enable_publishing": false,
+                                    "hide_legend": true,
+                                    "withdateranges": true,
+                                    "hide_side_toolbar": false,
+                                    "allow_symbol_change": true,
+                                    "container_id": "tradingview_7566f"
+                                }
+                            );
+                        </script>
+                    </div>
+                    <!-- TradingView Widget END -->
+
+                </div>
+            </div>
             <!--Card-1-->
-            <div class="col-2 pr-0 pl-0">
+            <div class="col-2 pr-1 pl-0 ">
                 <div class="card card-1">
                     <div class="card-header mt-2">
                         <ul class="nav" role="tablist">
@@ -75,20 +109,9 @@
                                 <a class="nav-link btn btn-outline-warning btn-sm" href="#deals" role="tab">FIAT$</a>
                             </li>
                         </ul>
-                        <ul class="nav mt-3" role="tablist" id="subNav-2">
-                            <li class="nav-item">
-                                <input type="search" placeholder="Search" id="table1Search" autocomplete="off">
-                            </li>
-                            <li>
-                                <a class="nav-link btn btn-outline-secondary " id="changeToChange" role="tab">Change</a>
-                            </li>
-                            <li>
-                                <a class="nav-link btn btn-outline-secondary " id="changeToVolume" role="tab">Volume</a>
-                            </li>
-                        </ul>
                     </div>
                     <div class="card-body text-white mt-2 ">
-                        <table class="table display table-dark table-sm" id="table-1">
+                        <table class="table table-hover display table-dark table-sm" id="table-1">
                             <thead>
                             <tr>
                                 <th data-field="pair">Pair</th>
@@ -101,8 +124,8 @@
                 </div>
                 <!--Card-2-->
                 <div class="card card-2 text-white mt-2 pl-1">
-                    <div class="card-header pt-2">
-                        <p class="card-title text-warning">Trading History</p>
+                    <div>
+                      <a class="ml-2">0.15484848</a>
                     </div>
                     <div class="card-body ">
                         <table class="table table-hover table-dark table-sm" id="table-2">
@@ -117,44 +140,8 @@
                     </div>
                 </div>
             </div>
-            <!-- Graph-card-->
-            <div class="col-8 pr-2 pl-2">
-                <div class="card graph-card " style=" height: 100%">
-                    <!-- TradingView Widget BEGIN -->
-                    <div class="tradingview-widget-container">
-                        <div id="tradingview_8786c"></div>
-                        <div class="tradingview-widget-copyright"><a
-                                href="https://in.tradingview.com/symbols/KUCOIN-VRABBNB/" rel="noopener"
-                                target="_blank"><span class="blue-text">VRABBNB Chart</span></a> by TradingView
-                        </div>
-                        <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-                        <script type="text/javascript">
-                            new TradingView.widget(
-                                {
-                                    "width": 980,
-                                    "height": 420,
-                                    "symbol": "KUCOIN:VRABBNB",
-                                    "interval": "D",
-                                    "timezone": "Etc/UTC",
-                                    "theme": "dark",
-                                    "style": "1",
-                                    "locale": "in",
-                                    "toolbar_bg": "#f1f3f6",
-                                    "enable_publishing": false,
-                                    "hide_top_toolbar": true,
-                                    "hide_side_toolbar": false,
-                                    "allow_symbol_change": true,
-                                    "container_id": "tradingview_8786c"
-                                }
-                            );
-                        </script>
-                    </div>
-                    <!-- TradingView Widget END -->
-                </div>
-            </div>
-
             <!-- Card-3-->
-            <div class="col-2 pr-0 pl-0">
+            <div class="col-2 pr-0 pl-1">
                 <div class="card card-3">
                     <div class="card-header">
                         <i class="fas fa-stream btn btn-dark"></i>
@@ -172,23 +159,6 @@
                     </div>
                 </div>
                 <!-- Card-4-->
-                <div class="card card-4 text-white mt-2 pl-1">
-                    <div class="card-header pt-2">
-                        <a class="card-title text-danger">0.00709413</a> <a
-                            class="card-title text-warning">0.00709413</a>
-                    </div>
-                    <div class="card-body ">
-                        <table class="table table-hover table-dark table-sm mt-2" id="table-4">
-                            <thead>
-                            <tr>
-                                <th data-field="price">Price</th>
-                                <th data-field="amount">Amount</th>
-                                <th data-field="total">Total</th>
-                            </tr>
-                            </thead>
-                        </table>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -208,14 +178,7 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn btn-outline-warning btn-sm" href="#description"
-                               role="tab">Open History</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-outline-warning btn-sm" href="#deals" role="tab">Trade
-                                History</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-outline-warning btn-sm" href="#deals" role="tab">Balances</a>
+                               role="tab">Order History</a>
                         </li>
                         <li class="nav-item ml-auto">
                             <input type="search" placeholder="Search" class="card-nav-search" id="table5Search"
@@ -223,7 +186,7 @@
                         </li>
                     </ul>
                     <div>
-                        <table class="display table table-dark table-sm" style="width:100%" id="table-5">
+                        <table class="display table-hover  table table-dark table-sm" style="width:100%" id="table-5">
                             <thead>
                             <tr>
                                 <th data-field="txHash">TxHash</th>
@@ -242,11 +205,26 @@
             </div>
             <!--  Card-6 payments-->
             <div class="col-4 card-6">
-                <div style="background-color: #12161C; font-size: smaller">
-                    <i class="fa fa-stream" style="margin-right: 15px;padding: 0"></i><a class="text-warning">Limit
-                    Order</a>
+                <div class="form-top ">
+                    <ul class="nav" role="tablist">
+                        <li class="nav-item">
+                            <i class="fas fa-stream "></i>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-warning btn-sm " href="#description"
+                               role="tab">Limit</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn btn-outline-warning btn-sm" href="#description"
+                               role="tab">Market</a>
+                        </li>
+                    </ul>
+
+                    </ul>
                 </div>
-                <div class="row">
+
+                <div class="row mt-2">
                     <div class="col">
                         <!--  buy Form-->
                         <form id="buyForm">

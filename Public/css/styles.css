@@ -51,6 +51,12 @@ thead {
     font-size: smaller;
     text-decoration: none;
 }
+.table{
+    background-color:#12161C ;
+}
+.table td{
+    border-color: transparent;
+}
 .navbar{
     padding-top: 0px;
     padding-bottom: 0px;
@@ -75,19 +81,21 @@ thead {
 }
 .card-body{
     font-size: small;
-    max-height: 150px;
     overflow: hidden scroll ;
 }
+
 .card-body::-webkit-scrollbar {
     display: none;
 }
 .card-1 .nav-link{
     padding: 0 5px;
 }
+.card-1 .card-body{
+    height: 180px;
+}
 .card-1 #subNav-2 a{
     font-size: smaller;
 }
-
 .card-1 #subNav-2 .btn{
     border-radius: 2px;
     width: 55px;
@@ -98,8 +106,11 @@ thead {
  .dataTables_filter{
     display: none;
 }
+.card-2 .card-body{
+    height: 180px;
+}
 .card-3 .card-body{
-    max-height: 175px;
+    height: 406px;
 }
 .card-3 .card-header i{
     padding:  5px 2px;
@@ -109,17 +120,31 @@ thead {
     background-color: transparent;
     margin: 0;
 }
-.card-4 .card-body{
-    max-height: 183px;
+.card-5 .nav{
+    background-color: #12161C;
 }
-.card-4 a{
-    font-size: large;
-    font-weight: bold;
-    margin:0 10px;
+
+.card-5 .btn{
+    margin: 5px 5px;
+    padding: 1px 15px;
+    border-color: transparent;
+}
+.card-5 .dataTables_wrapper {
+    height: 210px;
+
 }
 .card-6{
     background-color: #12161C;
     padding: 2px 16px;
+}
+.card-6 .form-top .btn{
+    margin-right: 10px;
+    border-color: transparent;
+    padding:1px 7px;
+}
+.card-6 .form-top i{
+    margin-right: 10px;
+    color: #808080;
 }
 #secondSection form{
      color: grey;
@@ -154,19 +179,6 @@ thead {
    border-radius: 5px;
 }
 
-.card-5 .nav{
-    background-color: #12161C;
-}
-.card-5 .nav-link{
-    padding: 0;
-    margin:2px;
-    width: 6em;
-}
-.card-5 .btn{
-    margin: 5px 5px;
-    padding-right: 20px;
-    border-color: transparent;
-}
 .fixed-table-loading{
     display: none;
 }
@@ -220,6 +232,7 @@ thead {
     color: white;
 
 }
+
 
 /*    background: rgb(84,158,138);*/
 /*    background: linear-gradient(90deg, rgba(84,158,138,1) 0%, rgba(15,159,53,1) 35%, rgba(0,255,110,1) 100%);*/
