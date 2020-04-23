@@ -31,7 +31,7 @@ io.on('connection', (socket) => {
             "notional": "6275" + counter
         });
         counter++;
-        if(counter === 10) {
+        if(counter === 2) {
             clearInterval(i);
         }
     }, 3000);
@@ -41,12 +41,20 @@ io.on('connection', (socket) => {
 
 app.post('/sellPost', (req, res) => {
     console.log(req.body);
-    res.send("got it");
+    res.send("got it limit sellpost");
 });
 
 app.post('/buyPost', (req, res) => {
     console.log(req.body);
-    res.send("got it");
+    res.send("got it limit buyPost");
+});
+app.post('/marketSellPost', (req, res) => {
+    console.log(req.body);
+    res.send("got it marketSellPost");
+});
+app.post('/marketBuyPost', (req, res) => {
+    console.log(req.body);
+    res.send("got it marketbuyPost");
 });
 server.listen(3300);
 

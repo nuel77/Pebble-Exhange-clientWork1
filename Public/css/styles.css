@@ -14,7 +14,7 @@ nav .btn{
     border-color: transparent;
 }
 nav ul{
-    padding: 0 2em;
+    padding: 0 0;
 }
 section .card{
      padding: 0;
@@ -24,7 +24,7 @@ section .card{
 section .card-header{
     padding:0;
     color: gray;
-    font-size: smaller;
+    font-size: small;
 }
 section .card-body{
     padding: 0;
@@ -45,17 +45,26 @@ section .nav input{
     color: white;
 
 }
+.container-fluid{
+    font-family: 'Ropa Sans', sans-serif; !important;
+}
 
 thead {
     color: gray;
-    font-size: smaller;
+    font-size: small;
     text-decoration: none;
+}
+.btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none;
 }
 .table{
     background-color:#12161C ;
 }
 .table td{
     border-color: transparent;
+    color: whitesmoke;
+    padding: 1px;
 }
 .navbar{
     padding-top: 0px;
@@ -94,7 +103,7 @@ thead {
     height: 180px;
 }
 .card-1 #subNav-2 a{
-    font-size: smaller;
+    font-size: small;
 }
 .card-1 #subNav-2 .btn{
     border-radius: 2px;
@@ -107,7 +116,7 @@ thead {
     display: none;
 }
 .card-2 .card-body{
-    height: 180px;
+    height: 195px;
 }
 .card-3 .card-body{
     height: 406px;
@@ -125,13 +134,19 @@ thead {
 }
 
 .card-5 .btn{
-    margin: 5px 5px;
-    padding: 1px 15px;
+    margin: 0 5px;
+    padding: 0 10px 2px 8px;
     border-color: transparent;
 }
 .card-5 .dataTables_wrapper {
     height: 210px;
 
+}
+.card-5  i{
+    margin-right: 5px;
+    margin-left: 2px;
+    padding: 0 5px 2px 8px;
+    color: #808080;
 }
 .card-6{
     background-color: #12161C;
@@ -140,7 +155,19 @@ thead {
 .card-6 .form-top .btn{
     margin-right: 10px;
     border-color: transparent;
-    padding:1px 7px;
+    padding:1px 5px;
+}
+.card-6 .sell-form .btn{
+    color: white;
+    font-size: medium;
+    background: rgb(219,86,136);
+    background: linear-gradient(90deg, rgba(219,86,136,1) 0%, rgba(226,40,35,1) 35%, rgba(149,0,23,1) 100%);
+}
+.card-6 .buy-form .btn{
+    color: white;
+    font-size: medium;
+    background: rgb(84,158,138);
+    background: linear-gradient(90deg, rgba(84,158,138,1) 0%, rgba(15,159,53,1) 35%, rgba(0,255,110,1) 100%);
 }
 .card-6 .form-top i{
     margin-right: 10px;
@@ -148,7 +175,7 @@ thead {
 }
 #secondSection form{
      color: grey;
-     font-size: smaller;
+     font-size: small;
  }
 #secondSection label{
    margin: 0;
@@ -159,16 +186,7 @@ thead {
     color: white;
     font-weight: bold;
  }
-#secondSection .sell-form .btn{
-    color: white;
-    font-size: medium;
-    background-color: red;
-}
-#secondSection .buy-form .btn{
-    color: white;
-    font-size: medium;
-    background-color: red;
-}
+
 .input-group-text{
     color: grey;
     background-color: black;
@@ -194,7 +212,7 @@ thead {
 .dataTables_wrapper .row{
     background-color: #12161C;
     color: grey;
-    font-size: smaller;
+    font-size: small;
 }
 .dataTables_length{
     display: none;
@@ -234,7 +252,5 @@ thead {
 }
 
 
-/*    background: rgb(84,158,138);*/
-/*    background: linear-gradient(90deg, rgba(84,158,138,1) 0%, rgba(15,159,53,1) 35%, rgba(0,255,110,1) 100%);*/
-/*}*/
+
 
