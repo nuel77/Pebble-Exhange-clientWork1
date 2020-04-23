@@ -129,6 +129,10 @@ thead {
     background-color: transparent;
     margin: 0;
 }
+.card-3 .dataTables_wrapper {
+    height: 100%;
+
+}
 .card-5 .nav{
     background-color: #12161C;
 }
