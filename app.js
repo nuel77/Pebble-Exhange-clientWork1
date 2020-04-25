@@ -3,14 +3,14 @@ const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const bodyParser = require('body-parser');
-process.env.PWD = process.cwd()
+
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 app.get('/', (req, res) => {
-    res.sendFile(process.env.PWD = process.cwd() + "/index.html");
+    res.sendFile(__dirname + "/index.html");
 });
 io.on('connection', (socket) => {
     console.log('a user connected');
