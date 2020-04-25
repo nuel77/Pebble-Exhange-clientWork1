@@ -3,6 +3,7 @@ const app = express();
 const server = require('http').Server(app);
 const io = require('socket.io')(server);
 const bodyParser = require('body-parser');
+const PORT = process.env.PORT || 5000
 
 
 app.use(express.static("public"));
@@ -56,6 +57,6 @@ app.post('/marketBuyPost', (req, res) => {
     console.log(req.body);
     res.send("got it marketbuyPost");
 });
-server.listen(3300);
+server.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 
