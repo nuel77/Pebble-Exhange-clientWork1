@@ -5,7 +5,7 @@ const io = require('socket.io')(server);
 const bodyParser = require('body-parser');
 
 
-app.use(express.static("public"));
+app.use(express.static("Public"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
