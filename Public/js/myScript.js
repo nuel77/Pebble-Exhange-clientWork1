@@ -107,7 +107,7 @@ $(function () {
     createTable1(dataForTable1);
     createTable2(dataForTable2);
     createTable3(dataForTable3);
-    createTable4(dataForTable4);//order History
+    createTable4(dataForTable4);//order History table
     createTable5(dataForTable5); //open orders table
 
     //click event of 5th table
