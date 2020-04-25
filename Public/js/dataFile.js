@@ -235,35 +235,31 @@ let dataForTable1 = [
     }
 ];
 let dataForTable2 = [
+
     {
-        "price": 0,
-        "amount":"2313",
-        "time":"9.30"
+        price: 1,
+        amount:"2313",
+        time:"9.30"
     },
     {
-        "price": 1,
-        "amount":"2313",
-        "time":"9.30"
+        price: 2,
+        amount:"2313",
+        time:"9.30"
     },
     {
-        "price": 2,
-        "amount":"2313",
-        "time":"9.30"
+        price: 3,
+        amount:"2313",
+        time:"9.30"
     },
     {
-        "price": 3,
-        "amount":"2313",
-        "time":"9.30"
+        price: 4,
+        amount:"2313",
+        time:"9.30"
     },
     {
-        "price": 4,
-        "amount":"2313",
-        "time":"9.30"
-    },
-    {
-        "price": 5,
-        "amount":"2313",
-        "time":"9.30"
+        price: 5,
+        amount:"2313",
+        time:"9.30"
     }
 ];
 

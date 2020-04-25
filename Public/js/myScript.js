@@ -1,10 +1,10 @@
 
 //Form fields data cleaning
+
 //to suppress scientific notations in form field
 function precise(elem) {
     elem.value = Number(elem.value).toFixed(8);
 }
-
 //form events for calculation total etc
 $('#buyAmount').change(() => {
     let val = $('#buyAmount').val() * $('#buyPrice').val();
@@ -15,12 +15,9 @@ $('#sellAmount').change(() => {
     $('#sellTotal').val(val.toFixed(8));
 });
 
-//table event for search --table-5
-$('#table5Search').on('keyup change paste', function(e){
-    let table = $('#table-5').DataTable();
-    table.search( this.value ).draw();
 
-});
+
+//function to create tables
 function createTable5(data){
     $('#table-5').DataTable( {
         data: data,
@@ -41,16 +38,9 @@ function createTable5(data){
         ]
     } );
 }
-
-
-//when document is ready this function is called
-$(function () {
-
-    //initialize tables
-    createTable5(dataForTable5);
-
+function createTable4(data){
     $('#table-4').DataTable({
-        data: dataForTable4,
+        data: data,
         info:false,
         fixedHeader: true,
         bFilter:false,
@@ -63,8 +53,10 @@ $(function () {
 
         ]
     });
+}
+function createTable3(data){
     $('#table-3').DataTable({
-        data: dataForTable3,
+        data: data,
         fixedHeader: true,
         info:false,
         bFilter:false,
@@ -77,8 +69,10 @@ $(function () {
 
         ]
     });
+}
+function createTable2(data){
     $('#table-2').DataTable({
-        data: dataForTable2,
+        data: data,
         info:false,
         bFilter:false,
         paging:false,
@@ -89,8 +83,11 @@ $(function () {
             { data: 'time' },
         ]
     });
+}
+
+function createTable1(data){
     $('#table-1').DataTable({
-        data: dataForTable1,
+        data: data,
         paging:false,
         info:false,
         select:'single',
@@ -101,17 +98,42 @@ $(function () {
             { data: 'change' },
         ]
     });
+}
+
+//when document is ready this function is called
+$(function () {
+
+    //initialize tables
+    createTable1(dataForTable1);
+    createTable2(dataForTable2);
+    createTable3(dataForTable3);
+    createTable4(dataForTable4);//order History
+    createTable5(dataForTable5); //open orders table
 
     //click event of 5th table
-
     $('#table-5').DataTable()
         .on( 'select', function ( e, dt, type, indexes ) {
             if ( type === 'row' ) {
                 var data = $('#table-5').DataTable().rows( indexes ).data()[0];
             }
             console.log(data);
-        } );
+        });
+    //table search event for --table-5
+    $('#table5Search').on('keyup change paste', function(e){
+        let table = $('#table-5').DataTable();
+        table.search( this.value ).draw();
+    });
+    //  orderHistoryTable and openOrderTable toggle functions
+    $('#openOrdersBtn').click(()=>{
+        $('#openOrdersDiv').removeClass('d-none');
+        $('#orderHistoryDiv').addClass('d-none')
+    });
+    $('#orderHistoryBtn').click(()=>{
+        $('#orderHistoryDiv').removeClass('d-none');
+        $('#openOrdersDiv').addClass('d-none')
+    });
 
+//AXIOS FUNCTIONS
 
     //Sending form data
     $('#sellForm').submit(e => {

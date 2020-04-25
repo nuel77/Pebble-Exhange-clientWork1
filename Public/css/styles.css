@@ -7,6 +7,8 @@ body{
 }
 nav{
     background-color: #12161C;
+    font-family: 'Roboto', sans-serif;
+
 }
 nav .btn{
     border-radius:0px ;
@@ -58,6 +60,10 @@ thead {
     outline: none !important;
     box-shadow: none;
 }
+input:focus,input:active {
+    outline: none;
+    box-shadow: none;
+}
 .table{
     background-color:#12161C ;
 }
@@ -69,6 +75,10 @@ thead {
 .navbar{
     padding-top: 0px;
     padding-bottom: 0px;
+}
+.navbar-brand{
+    margin-left: 15px;
+    font-size: 25px;
 }
 
 .card{
@@ -136,7 +146,9 @@ thead {
 .card-5 .nav{
     background-color: #12161C;
 }
-
+.card-5 .nav-item{
+    height: 25px;
+}
 .card-5 .btn{
     margin: 0 5px;
     padding: 0 10px 2px 8px;
@@ -190,7 +202,6 @@ thead {
     color: white;
     font-weight: bold;
  }
-
 .input-group-text{
     color: grey;
     background-color: black;

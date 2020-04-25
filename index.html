@@ -11,8 +11,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/0b536b009a.js" crossorigin="anonymous"></script>
-<!--    font -->
+  <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Ropa+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <!--    bootstrap-table-->
     <script src="https://unpkg.com/bootstrap-table@1.16.0/dist/bootstrap-table.min.js"></script>
     <!--    dataTable -->
@@ -166,11 +167,11 @@
                             <i class="fas fa-stream "></i>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-outline-warning btn-sm " href="#description"
+                            <a class="nav-link btn btn-outline-warning btn-sm " href="#description" id="openOrdersBtn"
                                role="tab">Open Orders</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn btn-outline-warning btn-sm" href="#description"
+                            <a class="nav-link btn btn-outline-warning btn-sm" href="#description" id="orderHistoryBtn"
                                role="tab">Order History</a>
                         </li>
                         <li class="nav-item ml-auto">
@@ -178,7 +179,7 @@
                                    autocomplete="off">
                         </li>
                     </ul>
-                    <div>
+                    <div id="openOrdersDiv">
                         <table class="display table-hover  table table-dark table-sm" style="width:100%" id="table-5">
                             <thead>
                             <tr>
@@ -194,6 +195,18 @@
                             </thead>
                         </table>
                     </div>
+                    <div class="d-none" id="orderHistoryDiv">
+                        <table class="display table-hover  table table-dark table-sm" style="width:100%" id="table-4">
+                            <thead>
+                            <tr>
+                                <th data-field="txHash">TxHash</th>
+                                <th data-field="date">Date</th>
+                                <th data-field="pair">Pair</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+
                 </div>
             </div>
             <!--  Card-6 payments-->
@@ -222,7 +235,7 @@
                             <div class="form-group ">
                                 <label for="buyPrice">Price</label>
                                 <div class="input-group ">
-                                    <input class="form-control form-control-sm" id="buyPrice" name="buyPrice"
+                                    <input class="form-control shadow-none form-control-sm" id="buyPrice" name="buyPrice"
                                            type="number" onclick="precise(this)"
                                            value="0.00002278" step="0.00000001" min="0">
                                     <div class="input-group-append">
@@ -231,7 +244,7 @@
                                 </div>
                                 <label for="buyAmount">Amount</label>
                                 <div class="input-group ">
-                                    <input class="form-control form-control-sm" id="buyAmount" name="buyAmount"
+                                    <input class="form-control shadow-none form-control-sm" id="buyAmount" name="buyAmount"
                                            value="0" step="100" min="0" type="number" placeholder="">
                                     <div class="input-group-append">
                                         <span class="input-group-text">ETH</span>
@@ -239,7 +252,7 @@
                                 </div>
                                 <label for="buyTotal">Total</label>
                                 <div class="input-group ">
-                                    <input class="form-control form-control-sm" id="buyTotal" name="total" type="text"
+                                    <input class="form-control shadow-none form-control-sm" id="buyTotal" autocomplete="off" name="total" type="text"
                                            placeholder="">
                                     <div class="input-group-append">
                                         <span class="input-group-text">BTC</span>
@@ -275,7 +288,7 @@
                                 </div>
                                 <label for="sellTotal">Total</label>
                                 <div class="input-group ">
-                                    <input class="form-control form-control-sm" id="sellTotal" type="text" min="0"
+                                    <input class="form-control form-control-sm" id="sellTotal" autocomplete="off" type="text" min="0"
                                            name="sellTotal">
                                     <div class="input-group-append">
                                         <span class="input-group-text">BTC</span>

@@ -1,10 +1,9 @@
+
 let socket = io();
-
-socket.emit('chat message',"hello there");
+socket.emit('chat message',"chat-Connected");
+//live data to table 5(open Orders);
 socket.on('event-2',(msg)=>{
-    console.log(msg);
-    dataForTable5.push(msg);
-    $("#table-5").dataTable().fnDestroy();
-    createTable5(dataForTable5);
-
+    let table = $('#table-5').DataTable();
+    table.row.add(msg);
+    table.draw();
 });
