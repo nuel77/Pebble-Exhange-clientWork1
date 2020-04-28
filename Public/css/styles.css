@@ -22,7 +22,8 @@ section .card{
      padding: 5px;
      margin: 0;
      width: 100%;
-     border-radius:10px;
+     border-radius:8px;
+     display: relative;
  }
 section .card-header{
     padding:0;
@@ -94,7 +95,8 @@ input:focus,input:active {
 .card .btn{
     border-radius: 2px;
     border-color: transparent;
-    font-size: small;
+    font-size: 1rsem;
+    align-self: top;
 }
 .card .nav-item{
     padding: 0 5px ;
@@ -102,6 +104,7 @@ input:focus,input:active {
 .card-body{
     font-size: small;
     overflow: hidden scroll ;
+    position: relative;
 }
 
 .card-body::-webkit-scrollbar {
@@ -119,7 +122,7 @@ input:focus,input:active {
 }
 
 .card-2 .card-body{
-    height: 180px;
+    height: 182px;
 }
 .card-3 .card-body{
     height: 412px;
@@ -138,13 +141,10 @@ input:focus,input:active {
 }
 .card-5 .nav{
     background-color: #12161C;
-}
-.card-5 .nav-item{
-    height: 25px;
+    padding-bottom: 1px;
 }
 .card-5 .btn{
-    margin: 0 5px;
-    padding: 0 10px 2px 8px;
+    padding: 0 10px 0 8px;
     border-color: transparent;
 }
 .card-5 .dataTables_wrapper {
@@ -162,9 +162,9 @@ input:focus,input:active {
     padding: 2px 16px;
 }
 .card-6 .form-top .btn{
-    margin-right: 10px;
+    margin-right: 5px;
     border-color: transparent;
-    padding:1px 5px;
+    padding:0 5px;
 }
 .card-6 .sell-form .btn{
     color: white;
@@ -249,8 +249,8 @@ input:focus,input:active {
     color: white;
 }
 .card-nav-search{
-    margin:5px;
-    height: 25px;
+    margin:0;
+    height: 20px;
     width: 100px;
     border-radius: 5px;
     background-color: black;

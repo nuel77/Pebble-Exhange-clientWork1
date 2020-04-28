@@ -73,6 +73,7 @@ function createTable3(data){
 function createTable2(data){
     $('#table-2').DataTable({
         data: data,
+        fixedHeade: true,
         info:false,
         bFilter:false,
         paging:false,
@@ -88,6 +89,7 @@ function createTable2(data){
 function createTable1(data){
     $('#table-1').DataTable({
         data: data,
+        fixedHeade: true,
         paging:false,
         info:false,
         select:'single',

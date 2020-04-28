@@ -204,6 +204,24 @@ let dataForTable1 = [
         "change": "932"
     },
     {
+        "price": "0",
+        "pair": "test0",
+        "volume": "$0",
+        "change": "932"
+    },
+    {
+        "price": "0",
+        "pair": "test0",
+        "volume": "$0",
+        "change": "932"
+    },
+    {
+        "price": "0",
+        "pair": "test0",
+        "volume": "$0",
+        "change": "932"
+    },
+    {
         "price": "1",
         "pair": "test1",
         "volume": "$1",
