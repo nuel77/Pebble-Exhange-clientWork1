@@ -19,9 +19,10 @@ nav ul{
     padding: 0 0;
 }
 section .card{
-     padding: 0;
+     padding: 5px;
      margin: 0;
      width: 100%;
+     border-radius:10px;
  }
 section .card-header{
     padding:0;
@@ -80,10 +81,11 @@ input:focus,input:active {
     margin-left: 15px;
     font-size: 25px;
 }
-
+/* cards  */
 .card{
     background-color:#12161C;
     border-radius: 0;
+    position: relative;
 }
 
 .card-table{
@@ -96,7 +98,6 @@ input:focus,input:active {
 }
 .card .nav-item{
     padding: 0 5px ;
-
 }
 .card-body{
     font-size: small;
@@ -106,30 +107,22 @@ input:focus,input:active {
 .card-body::-webkit-scrollbar {
     display: none;
 }
+/* card 1 */
 .card-1 .nav-link{
     padding: 0 5px;
 }
 .card-1 .card-body{
     height: 180px;
 }
-.card-1 #subNav-2 a{
-    font-size: small;
-}
-.card-1 #subNav-2 .btn{
-    border-radius: 2px;
-    width: 55px;
-    margin: 0 3px;
-    height: 24px;
-    padding:2px 0;
-}
  .dataTables_filter{
     display: none;
 }
+
 .card-2 .card-body{
-    height: 195px;
+    height: 180px;
 }
 .card-3 .card-body{
-    height: 406px;
+    height: 412px;
 }
 .card-3 .card-header i{
     padding:  5px 2px;
@@ -265,7 +258,21 @@ input:focus,input:active {
     color: white;
 
 }
+.card-2-main-data1{
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 1px; 
+    
+}
+.card-2-main-data2{
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 0.5px; 
+}
 
+.tradingview-widget-copyright{
+    display: none;
+}
 
 
 
