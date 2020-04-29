@@ -1,3 +1,20 @@
+html{
+	margin:0;
+	padding: 0;
+}
+.no-js{
+	padding: 0;!important
+	margin: 0;!important
+}
+footer{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	
+	
+	text-align: center;
+  }
 body {
 	margin: 0 0;
 	padding: 0;
@@ -60,11 +77,14 @@ p, .control-group {
 	margin-left: 15px;
 	font-size: 28px;!important;
 }
-.col-12{
-	padding: 5em 10em;
+.container-fluid{
+	height: 1vh;
 }
 .center-card{
-	padding: 5em 12em;
+	padding-top: 7em;
+}
+form .btn{
+	width: 10rem;
 }
 .demo {
 	border-bottom: 1px solid #e8e8e8;
@@ -79,6 +99,9 @@ p, .control-group {
 }
 .demo select, .demo input, .demo .selectize-control {
 	width: 100%;
+}
+.selectize-input{
+	
 }
 .demo > *:first-child {
 	margin-top: 0;

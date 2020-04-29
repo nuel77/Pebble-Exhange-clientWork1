@@ -6,96 +6,165 @@
 <!--[if IE 8]>
 <html class="no-js lt-ie9"><![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js"><!--<![endif]-->
+<html>
+<!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <title>pebble-signin</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="description" content=""/>
+    <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,maximum-scale=1"
+    />
     <!--    Bootstrap files-->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://kit.fontawesome.com/0b536b009a.js" crossorigin="anonymous"></script>
+    <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+    />
+    <script
+            src="https://kit.fontawesome.com/0b536b009a.js"
+            crossorigin="anonymous"
+    ></script>
     <!--    Selectize.js files-->
-    <link rel="stylesheet" href="css/selectize.default.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/signin-stylesheet.css">
+    <link rel="stylesheet" href="css/selectize.default.css"/>
+    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="css/signin-stylesheet.css"/>
     <!--   fonts-->
-    <script src="https://kit.fontawesome.com/0b536b009a.js" crossorigin="anonymous"></script>
+    <script
+            src="https://kit.fontawesome.com/0b536b009a.js"
+            crossorigin="anonymous"
+    ></script>
     <!--[if IE 8]>
     <script src="js/es5.js"></script><![endif]-->
     <script src="js/jquery.min.js"></script>
     <script src="js/selectize.js"></script>
     <script src="bundle.js"></script>
     <script src="js/bip39WordList.js"></script>
-
-
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
-            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+    >
         <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
         <h5 class="navbar-brand" href="#">pebble</h5>
         <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
             <li class="nav-item active">
-                <button type="button" class="btn btn-light"><a class="nav-link" href="/">Exchange </a></button>
+                <button type="button" class="btn btn-light">
+                    <a class="nav-link" href="/">Exchange </a>
+                </button>
             </li>
             <li class="nav-item active">
-                <button type="button" class="btn btn-light "><a class="nav-link" href="#">Explorer </a></button>
+                <button type="button" class="btn btn-light">
+                    <a class="nav-link" href="#">Explorer </a>
+                </button>
             </li>
             <li class="nav-item active">
-                <button type="button" class="btn  btn-light"><a class="nav-link" href="#">Wallet </a></button>
+                <button type="button" class="btn btn-light">
+                    <a class="nav-link" href="#">Wallet </a>
+                </button>
             </li>
         </ul>
     </div>
 </nav>
-<div class="container-fluid " id="wrapper">
-    <div class="row h-100 justify-content-center align-items-center">
-        <div class="col-12">
-            <div class="center-card">
-                <center><h1>Login</h1></center>
-                <hr>
-                <center><h2>Mnemonic Passphrase </h2></center>
-                <form class="control-group" id="keywordForm">
-                    <label for="select-tools">Phrase:</label>
-                    <select id="select-tools" placeholder="Pick Keywords"></select>
-                    <div class="buttons-div">
-                        <button type="submit" class="btn btn-dark btn-block">Submit <i class="fas fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </form>
+
+<div class="container-fluid" id="wrapper">
+    <section>
+        <div class="row h-100 justify-content-center align-items-center">
+            <div class="col-3"></div>
+
+            <div class="col-6 col-md-6">
+                <div class="center-card">
+                    <center><h1>Login</h1></center>
+                    <hr/>
+                    <center><h2>Mnemonic Passphrase</h2></center>
+                    <form class="control-group" id="keywordForm">
+                        <label for="select-tools">Phrase:</label>
+                        <select id="select-tools" placeholder="Pick Keywords"></select>
+                        <div class="buttons-div mt-2 " style="text-align: center;">
+                            <button type="submit" class="btn btn-md btn-dark ">
+                                Login <i class="fas fa-sign-in-alt"></i>
+                            </button>
+                            <button class="btn btn-md btn-dark ">
+                                Sign Up
+                            </button>
+                        </div>
+                    </form>
+                </div>
             </div>
+
+            <div class="col-3"></div>
         </div>
-    </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small special-color-dark pt-4">
+        <!-- Footer Elements -->
+        <div class="container">
+            <!-- Social buttons -->
+            <ul class="list-unstyled list-inline text-center">
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-fb mx-1">
+                        <i class="fab fa-facebook-f"> </i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-tw mx-1">
+                        <i class="fab fa-twitter"> </i>
+                    </a>
+                </li>
+
+                <li class="list-inline-item">
+                    <a class="btn-floating btn-li mx-1">
+                        <i class="fab fa-linkedin-in"> </i>
+                    </a>
+                </li>
+            </ul>
+            <!-- Social buttons -->
+        </div>
+        <!-- Footer Elements -->
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            © 2020 Copyright:
+            <a href="https://mdbootstrap.com/"> pebbledlt.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 </div>
 
 <script>
     $(document).ready(() => {
-        $('#select-tools').selectize({
+        $("#select-tools").selectize({
             maxItems: null,
-            valueField: 'id',
-            labelField: 'title',
-            searchField: 'title',
+            valueField: "id",
+            labelField: "title",
+            searchField: "title",
             options: bip39wordList,
-            create: false
+            create: false,
         });
 
-        $('#keywordForm').submit(e => {
+        $("#keywordForm").submit((e) => {
             e.preventDefault();
             let dataArray = $("#select-tools").val();
-            let dataString=dataArray.join(' ');
-            getSeed(dataString).then((res)=>{
-                console.log(res.toString('hex'));
+            let dataString = dataArray.join(" ");
+            getSeed(dataString).then((res) => {
+                console.log(res.toString("hex"));
             });
-
         });
-    })
-
+    });
 </script>
 </body>
 </html>
-
